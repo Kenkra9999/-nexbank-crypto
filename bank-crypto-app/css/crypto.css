@@ -1,0 +1,218 @@
+/* crypto.css */
+.crypto-layout {
+    display: flex;
+    gap: 0;
+    height: calc(100vh - 120px);
+}
+
+.resizer {
+    width: 8px;
+    cursor: col-resize;
+    flex-shrink: 0;
+    z-index: 10;
+    transition: background 0.2s;
+    background: transparent;
+    margin: 0 4px;
+    border-radius: 4px;
+}
+.resizer:hover, .resizer.resizing {
+    background: transparent;
+}
+
+.market-watch {
+    width: 300px;
+    min-width: 200px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.crypto-center {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    overflow: hidden;
+}
+
+.order-panel {
+    width: 300px;
+    min-width: 250px;
+    max-width: 500px;
+    padding: 1.5rem;
+}
+
+/* Market Watch List */
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--glass-border);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.coin-list {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.coin-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-size: 0.9rem;
+}
+
+.coin-item:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+.coin-name { font-weight: 600; }
+.coin-price { text-align: right; transition: color 0.3s; }
+.coin-change { text-align: right; }
+
+.flash-green { color: var(--color-green) !important; text-shadow: 0 0 8px rgba(14,203,129,0.5); }
+.flash-red { color: var(--color-red) !important; text-shadow: 0 0 8px rgba(246,70,93,0.5); }
+
+/* Chart Container */
+.tv-chart-container {
+    height: 60vh;
+    min-height: 350px;
+    width: 100%;
+    overflow: hidden;
+    resize: vertical;
+    padding-bottom: 5px;
+    position: relative;
+    z-index: 10;
+}
+
+.positions-panel {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+/* Trade Tabs */
+.trade-tabs {
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid var(--glass-border);
+    margin-bottom: 15px;
+    padding-top: 15px;
+}
+
+.tab-item {
+    padding: 10px 0;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    position: relative;
+}
+
+.tab-item:hover { color: white; }
+
+.tab-item.active {
+    color: white;
+}
+
+.tab-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: white;
+}
+
+/* Data Table */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.data-table th, .data-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--glass-border);
+    font-size: 0.9rem;
+}
+
+.data-table th {
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.badge {
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.badge.buy { background: rgba(14, 203, 129, 0.2); color: var(--color-green); }
+.badge.sell { background: rgba(246, 70, 93, 0.2); color: var(--color-red); }
+
+/* Game Section */
+.game-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.inner-panel {
+    border: 1px solid rgba(255,255,255,0.05);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+}
+
+.history-list {
+    list-style: none;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.history-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 0.95rem;
+}
+
+/* Custom Range Slider */
+.custom-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+    padding: 0;
+    margin: 5px 0;
+}
+
+.custom-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--color-blue);
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--color-blue);
+}

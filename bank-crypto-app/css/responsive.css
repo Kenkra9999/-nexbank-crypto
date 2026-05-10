@@ -1,0 +1,158 @@
+/* responsive.css */
+@media (max-width: 1200px) {
+    .grid-layout {
+        grid-template-columns: 1fr 1fr;
+    }
+    .grid-span-2 {
+        grid-column: span 2;
+    }
+    
+    .crypto-layout {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .market-watch {
+        width: 100%;
+        height: 300px;
+    }
+    
+    .tv-chart-container {
+        height: 400px;
+    }
+    
+    .order-panel {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    #main-app {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        flex-direction: row;
+        border-radius: 0;
+        padding: 0;
+        align-items: center;
+        overflow-x: auto;
+    }
+    
+    .sidebar .logo {
+        padding: 1rem;
+        margin: 0;
+    }
+    
+    .sidebar-menu {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+    }
+    
+    .sidebar-menu li {
+        border-left: none;
+        border-bottom: 3px solid transparent;
+        white-space: nowrap;
+    }
+    
+    .sidebar-menu li.active {
+        border-left: none;
+        border-bottom: 3px solid var(--color-blue);
+        background: linear-gradient(0deg, rgba(0, 102, 255, 0.1) 0%, transparent 100%);
+    }
+    
+    .sidebar-footer {
+        display: none;
+    }
+    
+    .content-area {
+        padding: 10px;
+    }
+    
+    .topbar {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    
+    .grid-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-span-2 {
+        grid-column: span 1;
+    }
+    
+    .login-box {
+        width: 90%;
+        padding: 2rem 1rem;
+    }
+    
+    /* Fix Modal Widths on Mobile */
+    .pin-modal-content {
+        width: 95% !important;
+        padding: 15px !important;
+        margin: 0 auto;
+    }
+    
+    .pin-modal-content input {
+        font-size: 16px; /* Prevent iOS zoom */
+    }
+    
+    /* Responsive Tables */
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .data-table th, .data-table td {
+        padding: 8px 10px;
+        white-space: nowrap; /* Prevent wrapping in tables */
+        font-size: 0.85rem;
+    }
+    
+    /* Hide resizers on mobile since layout is stacked */
+    .resizer {
+        display: none !important;
+    }
+    
+    /* Tab Styling on mobile */
+    .trade-tabs {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    
+    .tab-item {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+    
+    /* Crypto Layout Bot Tab */
+    #tab-bot-trading > div {
+        flex-direction: column !important;
+    }
+    
+    /* Hide some less important table columns on very small screens if needed */
+    .d-mobile-none {
+        display: none !important;
+    }
+}
+
+/* Extra small devices (phones, 480px and down) */
+@media (max-width: 480px) {
+    .glass-panel {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .text-giant {
+        font-size: 2.5rem;
+    }
+}
